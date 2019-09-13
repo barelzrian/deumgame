@@ -48,7 +48,7 @@ for (var i = 0 ; i < numberOfDrumButtons; i++)
         
     });
 
-    document.querySelectorAll(".drum")[5].addEventListener("click" , function()
+    document.querySelectorAll(".drum")[7].addEventListener("click" , function()
     {
     
      var audio = new Audio('sounds/crash.mp3');
