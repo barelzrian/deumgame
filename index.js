@@ -3,57 +3,46 @@ var numberOfDrumButtons = document.querySelectorAll(".drum").length
 for (var i = 0 ; i < numberOfDrumButtons; i++)
 {
 
-    document.querySelectorAll(".drum")[0].addEventListener("click" , function()
+    document.querySelectorAll(".drum")[i].addEventListener("click" , function()
     {
-    
-     var audio = new Audio('sounds/tom-1.mp3');
-     audio.play();
-  
-        
-    });
 
-    document.querySelectorAll(".drum")[1].addEventListener("click" , function()
-    {
+        var buttonInnerHTML = this.innerHTML;
     
-     var audio = new Audio('sounds/tom-2.mp3');
-     audio.play();
-  
-        
-    });
+           switch (buttonInnerHTML) {
+    case "a": 
+        var tom1 = new Audio("sounds/tom-1.mp3")
+        tom1.play();
+        break;
+       case "b":
+        var tom2 = new Audio("sounds/tom-2.mp3")
+        tom2.play();
+        break;
+   case "c":
+        var tom3 = new Audio("sounds/tom-3.mp3")
+        tom3.play();
+        break;
+   case "d":
+        var tom4 = new Audio("sounds/tom-4.mp3")
+        tom4.play();
+        break;
+   case "e":
+        var snare = new Audio("sounds/snare.mp3")
+        snare.play();
+        break;
+   case "f":
+        var kickbass = new Audio("sounds/kick-bass.mp3")
+        kickbass.play();
+        break;
+   case "g":
+        var crash = new Audio("sounds/crash.mp3")
+        crash.play();
+        break;
 
+    default:
+        break;
+}
+  
+        
+ });
 
-    document.querySelectorAll(".drum")[2].addEventListener("click" , function()
-    {
-    
-     var audio = new Audio('sounds/tom-3.mp3');
-     audio.play();
-  
-        
-    });
-
-    document.querySelectorAll(".drum")[3].addEventListener("click" , function()
-    {
-    
-     var audio = new Audio('sounds/snare.mp3');
-     audio.play();
-  
-        
-    });
-    document.querySelectorAll(".drum")[4].addEventListener("click" , function()
-    {
-    
-     var audio = new Audio('sounds/kick.mp3');
-     audio.play();
-  
-        
-    });
-
-    document.querySelectorAll(".drum")[7].addEventListener("click" , function()
-    {
-    
-     var audio = new Audio('sounds/crash.mp3');
-     audio.play();
-  
-        
-    });
 }
